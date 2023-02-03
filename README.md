@@ -43,6 +43,9 @@ ANS: *args is used in place of passing "definte and indefinte arguments" OR in o
      
 Q3. What is an iterator in python? Name the method used to initialise the iterator object and the method used for iteration.
 ANS: iterator is variable which iterates whole loop for a particular task OR in other words 'i' iterates 'for loop' for a given condition than i knowna as iterator.
+     OR in other words iterator in python is an object used to iterate over iterable object like list,tuples,dicts,and sets.
+     The iterator object is initialized using tier() method.
+     It uses next() for iteration.
 
 
 
@@ -65,4 +68,16 @@ ANS: Generator function in python is a like a simple function but in generator f
      
      
 Q5. Create a generator function for prime numbers less than 1000. 1000. Use the next() method to print the first 20 prime numbers.
-ANS:
+ANS: ### prime number using generator function without using next().
+     
+     def prime(n):                       ''' generator function definition '''
+         for i in range(n):
+             if i==1 or i==2:
+                 yield i
+             else:
+                 if i % 2 != 0:
+                     yield i
+       
+     
+     for i in prime(1000):               ''' generator function calling '''
+            print(i)
